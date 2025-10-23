@@ -14,7 +14,8 @@ class Note(models.Model):
     text = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     address = (models.ForeignKey
-        ('Addresses', on_delete=models.CASCADE, related_name='back_note'))
+        ('Addresses', on_delete=models.CASCADE, related_name='back_note')
+    )
 
     def __str__(self):
         return self.text
