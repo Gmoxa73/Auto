@@ -14,7 +14,7 @@ class Note(models.Model):
     text = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     address = (models.ForeignKey
-               ('Addresses', on_delete=models.CASCADE, related_name='back_note'))
+     ('Addresses', on_delete=models.CASCADE, related_name='back_note'))
 
     def __str__(self):
         return self.text
@@ -24,7 +24,7 @@ class Addresses(models.Model):
     num = models.IntegerField()
     address = models.CharField(max_length=255)
     raion = (models.ForeignKey
-             ('Raions', on_delete=models.CASCADE, related_name='back_addresses'))
+     ('Raions', on_delete=models.CASCADE, related_name='back_addresses'))
 
     def __str__(self):
         return self.address
@@ -42,9 +42,9 @@ class Devices(models.Model):
     mask = models.CharField(max_length=15)
     gw = models.GenericIPAddressField()
     address = (models.ForeignKey
-               ('Addresses', on_delete=models.CASCADE, related_name='back_device'))
+     ('Addresses', on_delete=models.CASCADE, related_name='back_device'))
     type = (models.ForeignKey
-            ('Types', on_delete=models.CASCADE, related_name='back_type'))
+     ('Types', on_delete=models.CASCADE, related_name='back_type'))
 
     def __str__(self):
         return self.ip
