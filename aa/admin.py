@@ -26,4 +26,3 @@ class TypeAdmin(admin.ModelAdmin):
 @admin.register(Note)
 class NoteAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'text', 'created_at')
-
