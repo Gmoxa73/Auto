@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Raions, Addresses, Devices, Types
 
+
 class RaionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Raions
