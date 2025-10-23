@@ -6,18 +6,15 @@ class RaionSerializer(serializers.ModelSerializer):
         model = Raions
         fields = ['id', 'raion']
 
-
 class AddressesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Addresses
         fields = ['num', 'address']
 
-
 class TypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Types
         fields = ['type']
-
 
 class DevicesSerializer(serializers.ModelSerializer):
     address = AddressesSerializer(read_only=True)
