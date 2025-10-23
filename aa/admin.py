@@ -4,20 +4,19 @@ from .models import Raions, Addresses, Devices, Types, Note
 
 
 @admin.register(Raions)
-class RaionsAdmin(admin.ModelAdmin):
+class RaionAdmin(admin.ModelAdmin):
     list_display = ('id', 'raion')
 
-
 @admin.register(Addresses)
-class RaionsAdmin(admin.ModelAdmin):
+class AddressAdmin(admin.ModelAdmin):
     list_display = ('id', 'num', 'address')
 
 @admin.register(Devices)
-class RaionsAdmin(admin.ModelAdmin):
+class DeviceAdmin(admin.ModelAdmin):
     list_display = ('id', 'ip', 'mask', 'gw', 'type')
 
 @admin.register(Types)
-class RaionsAdmin(admin.ModelAdmin):
+class TypeAdmin(admin.ModelAdmin):
     list_display = ('id', 'type')
 
 @admin.register(Note)
