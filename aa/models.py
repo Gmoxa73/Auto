@@ -7,6 +7,7 @@ class Raions(models.Model):
     def __str__(self):
         return self.raion
 
+
 class Note(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
@@ -16,14 +17,15 @@ class Note(models.Model):
     def __str__(self):
         return self.text
 
+
 class Addresses(models.Model):
     num = models.IntegerField()
     address = models.CharField(max_length=255)
     raion = models.ForeignKey('Raions', on_delete=models.CASCADE, related_name='back_addresses')
 
-
     def __str__(self):
         return self.address
+
 
 class Types(models.Model):
     type = models.CharField(max_length=20)
@@ -41,10 +43,3 @@ class Devices(models.Model):
 
     def __str__(self):
         return self.ip
-
-
-
-
-
-
-
