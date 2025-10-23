@@ -22,7 +22,6 @@ class TypeSerializer(serializers.ModelSerializer):
 class DevicesSerializer(serializers.ModelSerializer):
     address = AddressesSerializer(read_only=True)
     type = TypeSerializer(read_only=True)
-
     class Meta:
         model = Devices
         fields = ['address', 'type', 'ip', 'gw', 'mask']
